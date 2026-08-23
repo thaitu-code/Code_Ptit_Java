@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class J02010 {
+public class J02011 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -12,11 +12,15 @@ public class J02010 {
             arr.add(x);
         }
         for (int i = 0; i < n - 1; i++) {
+            int val = arr.get(i);
+            int pos = i;
             for (int j = i + 1; j < n; j++) {
-                if (arr.get(i) > arr.get(j)) {
-                    Collections.swap(arr, i, j);
+                if (arr.get(j) < val) {
+                    val = arr.get(j);
+                    pos = j;
                 }
             }
+            Collections.swap(arr, pos, i);
             System.out.print("Buoc " + (i + 1) + ": ");
             for (int k = 0; k < n; k++) {
                 if (k != n - 1) {
