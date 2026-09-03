@@ -34,5 +34,6 @@ public class J02016 {
             } else
                 System.out.println("NO");
         }
+        sc.close();
     }
 }
