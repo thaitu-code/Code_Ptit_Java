@@ -56,6 +56,7 @@ public class J02033 {
             }
         }
         System.out.println(ans);
+        sc.close();
 
     }
 }
